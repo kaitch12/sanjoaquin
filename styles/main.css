@@ -18,7 +18,7 @@ header {
 }
 
 header img {
-    padding: 0 1em 0 1em;
+    padding: 0 1em 0 2em;
 }
 
 header h2 {
@@ -40,20 +40,49 @@ header h3 {
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 600px;
+    width: 1000px;
     margin: 0 auto 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
 }
 
+
+section {
+    width: 75%;
+    padding: 1em;
+}
+
+article {
+    display: flex;
+    border-bottom: 3px solid #931420;
+    gap: 40px;
+}
+
+article div {
+    width: 60%;
+}
+
+article img {
+    width: 40%;
+}
+article h3 {
+    margin-bottom: 10px;
+}
+
+aside {
+    width: 25%;
+    padding: 1em;
+}
+
 main {
     padding: 0 1em 0 1em;
+    display: flex;
+    flex-direction: row;
 }
 
 main h1 {
     font-size: 150%;
     padding: .3em 0;
-    border-top: 3px solid #931420;
     border-bottom: 3px solid #931420;
 
 }
