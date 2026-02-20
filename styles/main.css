@@ -11,13 +11,14 @@ html {
 header {
     display: flex;
     align-items: center;
-    gap: 20px;
     padding: 1.5em 0 2em 0;
     border-bottom: 3px solid #931420;
     background-image: linear-gradient(45deg, #ecac5d, white, #ecac5d);
 }
 
 header img {
+    max-width: 40em;
+    min-width: 70px;
     padding: 0 1em 0 2em;
 }
 
@@ -62,9 +63,10 @@ header h3 {
     text-decoration: none;
     color: white;
 }
+
 #nav_menu a:hover {
     color: yellow;
-    
+
 }
 
 
@@ -73,8 +75,9 @@ header h3 {
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 1000px;
-    margin: 0 auto 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
 }
@@ -97,6 +100,10 @@ article div {
 
 article img {
     width: 40%;
+    max-width: 100%;
+    height: auto;
+    min-width: 70px;
+    padding-bottom: 1em;
 }
 
 article h3 {
@@ -132,8 +139,9 @@ main h3 {
     padding-bottom: .25em;
 }
 
-main img {
+aside img {
     padding-bottom: 1em;
+    min-width: 70px;
 }
 
 main p {
@@ -166,4 +174,94 @@ footer p {
     color: white;
     padding: 1em 0 1em 0;
     text-align: center;
+}
+
+#mobilemenu {
+    display: none;
+}
+
+/* Media Query------------------------------------------------------------------- */
+
+@media only screen and (max-width: 900px) {
+    body {
+        box-shadow: none;
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section,
+    aside {
+        width: 95%;
+    }
+
+    article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article div {
+        width: 100%;
+    }
+
+    article img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    section {
+        order: 1;
+    }
+
+    aside {
+        order: 2;
+    }
+
+    #nav_menu {
+        display: none;
+    }
+
+    #mobilemenu {
+        display: block;
+    }
+
+    .slicknav_menu {
+        background-color: #800000;
+    }
+
+    #mobilemenu a {
+        color: white;
+    }
+    #mobilemenu a:hover {
+        color: #800000;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 200%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    header {
+        font-size: 95%;
+    }
+
+    section p {
+        font-size: 95%;
+    }
+
+    section {
+        order: 1;
+    }
+
+    aside {
+        order: 2;
+    }
 }
